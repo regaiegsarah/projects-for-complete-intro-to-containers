@@ -6,7 +6,7 @@ RUN npm ci
 COPY . .
 
 # runtime stage
-FROM alpine:3.10
+FROM alpine:3.19.4
 RUN apk add --update nodejs
 RUN addgroup -S node && adduser -S node -G node
 USER node
